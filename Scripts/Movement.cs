@@ -14,10 +14,12 @@ public partial class Movement : CharacterBody2D
     
     public void GetInput()
     {
+        // Get direction you are moving
         Vector2 inputDirection = Input.GetVector("Left", "Right", "Up", "Down");
         
         var velocity = Vector2.Zero; // The player's movement vector.
 
+        // Add to velocity based on direction
         if (Input.IsActionPressed("Right"))
         {
             velocity.X += 1;
@@ -34,29 +36,28 @@ public partial class Movement : CharacterBody2D
         {
             velocity.Y -= 1;
         }
-
-        var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
         
+        // Play the walking or idle animation
         if (velocity.Length() > 0)
         {
-            velocity = velocity.Normalized() * Speed;
-            animatedSprite2D.Play("Walk");
+            _animatedSprite.Play("Walk");
         }
         else
         {
-            animatedSprite2D.Play("Idle");
+            _animatedSprite.Play("Idle");
         }
         
-        
+        // Flip the direction the character is facing
         if (velocity.X < 0)
         {
-            animatedSprite2D.FlipH = true;
+            _animatedSprite.FlipH = true;
         }
         else if (velocity.X > 0)
         {
-            animatedSprite2D.FlipH = false;
+            _animatedSprite.FlipH = false;
         }
         
+        // Move the character
         Velocity = inputDirection * Speed;
     }
     
