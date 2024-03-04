@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxo4dc2lrpm5n"
-path="res://.godot/imported/Al.png-5a71dddfc17c73f1c7018eec702f9c0f.ctex"
+uid="uid://e7n2w88drfuu"
+path="res://.godot/imported/Al Idle Left.png-073aa8cbee1edcd1766ffa625601010b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Al.png"
-dest_files=["res://.godot/imported/Al.png-5a71dddfc17c73f1c7018eec702f9c0f.ctex"]
+source_file="res://Sprites/Al/Al Idle Left.png"
+dest_files=["res://.godot/imported/Al Idle Left.png-073aa8cbee1edcd1766ffa625601010b.ctex"]
 
 [params]
 
