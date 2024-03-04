@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://crp7sd6o1yk7a"]
+
+[ext_resource type="Script" path="res://Movement.cs" id="1_ty310"]
+[ext_resource type="Texture2D" uid="uid://bxo4dc2lrpm5n" path="res://Al.png" id="2_yt5la"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cuc34"]
+size = Vector2(106, 93)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_ty310")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(580, 324.5)
+shape = SubResource("RectangleShape2D_cuc34")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(580.264, 324.397)
+scale = Vector2(4.21885, 4.90558)
+texture = ExtResource("2_yt5la")
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PackedVector2Array(0, 643, 1149, 649, 1152, 0, -3, -5, 0, 642, -52, 369, -156, -141, -16, -150, 358, -158, 1300, -152, 1309, 457, 1312, 838, 272, 841, -143, 838, -159, 184, -159, -141, -1, 635, 0, 642)
